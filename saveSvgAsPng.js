@@ -94,7 +94,7 @@
     data = data.replace(/%([0-9A-F]{2})/g, function(match, p1) {
       return String.fromCharCode('0x'+p1);
     });
-    return decodeURIComponent(data);
+    return unescape(data);
   }
 
   out$.svgAsDataUri = function(el, options, cb) {
